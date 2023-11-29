@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="-13dp">
+
+    <ListView
+        android:id="@+id/foodList"
+        android:layout_width="340dp"
+        android:layout_height="439dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="36dp"
+        android:divider="@android:color/darker_gray"
+        android:dividerHeight="0.5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/totalCalories" />
+
+    <TextView
+        android:id="@+id/totalCalories"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="20dp"
+        android:text="Total Calories : 0"
+        app:layout_constraintBottom_toTopOf="@+id/foodList"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/calories"
+        android:layout_width="280dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="65dp"
+        android:layout_marginEnd="65dp"
+        android:layout_marginBottom="16dp"
+        android:hint="Calories"
+        android:inputType="number"
+        android:maxLines="1"
+        android:singleLine="true"
+        app:layout_constraintBottom_toTopOf="@+id/add"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/foodName"
+        android:layout_width="280dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="65dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="65dp"
+        android:layout_marginBottom="12dp"
+        android:hint="Food Name"
+        android:inputType="text"
+        android:maxLines="1"
+        android:singleLine="true"
+        app:layout_constraintBottom_toTopOf="@+id/calories"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/foodList"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/add"
+        android:layout_width="327dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="43dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="42dp"
+        android:text="Add Entry"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calories" />
+
+    <TextView
+        android:id="@+id/errorText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toEndOf="@+id/totalCalories"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
